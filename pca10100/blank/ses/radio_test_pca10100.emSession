@@ -1,0 +1,67 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="162" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../radio.c" useHWbreakpoint="false"/>
+  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="radio_test_pca10100" radix="16" sizeText="" addressText=""/>
+ </Memory1>
+ <Memory2>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="radio_test_pca10100" radix="16" sizeText="" addressText=""/>
+ </Memory2>
+ <Memory3>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="radio_test_pca10100" radix="16" sizeText="" addressText=""/>
+ </Memory3>
+ <Memory4>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="radio_test_pca10100" radix="16" sizeText="" addressText=""/>
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="radio_test_pca10100"/>
+  <ProjectSessionItem path="radio_test_pca10100;radio_test_pca10100"/>
+  <ProjectSessionItem path="radio_test_pca10100;radio_test_pca10100;Application"/>
+ </Project>
+ <Register1>
+  <RegisterWindow visibleNodes="RADIO/TASKS_TXEN;RADIO/TASKS_RXEN;RADIO/TASKS_START;RADIO/TASKS_STOP;RADIO/TASKS_DISABLE;RADIO/TASKS_RSSISTART;RADIO/TASKS_RSSISTOP;RADIO/TASKS_BCSTART;RADIO/TASKS_BCSTOP;RADIO/TASKS_EDSTART;RADIO/TASKS_EDSTOP;RADIO/TASKS_CCASTART;RADIO/TASKS_CCASTOP;RADIO/EVENTS_READY;RADIO/EVENTS_ADDRESS;RADIO/EVENTS_PAYLOAD;RADIO/EVENTS_END;RADIO/EVENTS_DISABLED;RADIO/EVENTS_DEVMATCH;RADIO/EVENTS_DEVMISS;RADIO/EVENTS_RSSIEND;RADIO/EVENTS_BCMATCH;RADIO/EVENTS_CRCOK;RADIO/EVENTS_CRCERROR;RADIO/EVENTS_FRAMESTART;RADIO/EVENTS_EDEND;RADIO/EVENTS_EDSTOPPED;RADIO/EVENTS_CCAIDLE;RADIO/EVENTS_CCABUSY;RADIO/EVENTS_CCASTOPPED;RADIO/EVENTS_RATEBOOST;RADIO/EVENTS_TXREADY;RADIO/EVENTS_RXREADY;RADIO/EVENTS_MHRMATCH;RADIO/EVENTS_SYNC;RADIO/EVENTS_PHYEND;RADIO/EVENTS_CTEPRESENT;RADIO/SHORTS;RADIO/INTENSET;RADIO/INTENCLR;RADIO/CRCSTATUS;RADIO/RXMATCH;RADIO/RXCRC;RADIO/DAI;RADIO/PDUSTAT;RADIO/CTESTATUS;RADIO/DFESTATUS;RADIO/PACKETPTR;RADIO/FREQUENCY;RADIO/TXPOWER;RADIO/MODE;RADIO/PCNF0;RADIO/PCNF1;RADIO/BASE0;RADIO/BASE1;RADIO/PREFIX0;RADIO/PREFIX1;RADIO/TXADDRESS;RADIO/RXADDRESSES;RADIO/CRCCNF;RADIO/CRCPOLY;RADIO/CRCINIT;RADIO/TIFS;RADIO/RSSISAMPLE;RADIO/STATE;RADIO/DATAWHITEIV;RADIO/BCC;RADIO/DAB[0];RADIO/DAB[1];RADIO/DAB[2];RADIO/DAB[3];RADIO/DAB[4];RADIO/DAB[5];RADIO/DAB[6];RADIO/DAB[7];RADIO/DAP[0];RADIO/DAP[1];RADIO/DAP[2];RADIO/DAP[3];RADIO/DAP[4];RADIO/DAP[5];RADIO/DAP[6];RADIO/DAP[7];RADIO/DACNF;RADIO/MHRMATCHCONF;RADIO/MHRMATCHMAS;RADIO/MODECNF0;RADIO/SFD;RADIO/EDCNT;RADIO/EDSAMPLE;RADIO/CCACTRL;RADIO/DFEMODE;RADIO/CTEINLINECONF;RADIO/DFECTRL1;RADIO/DFECTRL2;RADIO/SWITCHPATTERN;RADIO/CLEARPATTERN;RADIO/POWER;RADIO/PSEL.DFEGPIO[0];RADIO/PSEL.DFEGPIO[1];RADIO/PSEL.DFEGPIO[2];RADIO/PSEL.DFEGPIO[3];RADIO/PSEL.DFEGPIO[4];RADIO/PSEL.DFEGPIO[5];RADIO/PSEL.DFEGPIO[6];RADIO/PSEL.DFEGPIO[7];RADIO/DFEPACKET.PTR;RADIO/DFEPACKET.MAXCNT;RADIO/DFEPACKET.AMOUNT" binaryNodes="" asciiNodes="" openNodes="RADIO;RADIO/DFEMODE;RADIO/DFECTRL1;RADIO/DFECTRL2" name="radio_test_pca10100" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register1>
+ <Register2>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="radio_test_pca10100" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register2>
+ <Register3>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="radio_test_pca10100" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register3>
+ <Register4>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="radio_test_pca10100" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register4>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never">
+   <Watchpoint expression="&amp;(iq_data)" name="&amp;(iq_data)" radix="-1" linenumber="0" filename="../ses"/>
+   <Watchpoint expression="iq_data" name="iq_data" radix="-1" linenumber="30" filename="../../../radio.c"/>
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="3" y="302" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../radio_config.c" selected="1" top="294" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="90" useTextEdit="1" openedFrom="C:/Users/jgamm/Desktop/rssi_measurement/nrf52833_development/examples/peripheral/radio_test/radio_config.c" useBinaryEdit="0" left="0" path="../../../radio_config.h" selected="0" top="101" codecName="Default"/>
+ </Files>
+ <ARMCrossStudioWindow activeProject="radio_test_pca10100" fileDialogDefaultFilter="" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/jgamm/Desktop/rssi_measurement/nrf52833_development/examples/peripheral/radio_test" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>
