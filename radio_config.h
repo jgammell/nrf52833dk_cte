@@ -106,7 +106,7 @@ bool RC_eventSync(void);
 bool RC_eventPhyEnd(void);
 bool RC_eventCtePresent(void);
 
-uint8_t RC_dfeAmount(void);
+uint16_t RC_dfeAmount(void);
 RC_State_t RC_state(void);
 
 void RC_reset(void);

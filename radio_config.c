@@ -307,7 +307,7 @@ bool RC_eventCtePresent(void)
   return false;
 }
 
-uint8_t RC_dfeAmount(void)
+uint16_t RC_dfeAmount(void)
 {
   return NRF_RADIO->DFEPACKET.AMOUNT;
 }
@@ -447,7 +447,6 @@ void RC_configureDfe(RC_DfeConfig_t * settings)
   assert(0<=settings->agcbackoffgain && settings->agcbackoffgain<=0xF);
   assert(0<=settings->tswitchoffset && settings->tswitchoffset<=0x1FFF);
   assert(0<=settings->tsampleoffset && settings->tsampleoffset<=0xFFF);
-  assert(settings->ptr != 0);
   assert(0<=settings->maxcnt && settings->maxcnt<=0x3FFF);
   NRF_RADIO->DFEMODE = 0;
   NRF_RADIO->DFEMODE |= (settings->mode)<<0;

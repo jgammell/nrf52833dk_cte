@@ -3,10 +3,13 @@
 #include "led_assert.h"
 #include <string.h>
 
+#define IQ_MAX_CNT 1024
+#define SAMPLE_PERIOD 3 // 1: 4us, 2: 2us, 3: 1us, 4: .5us, 5: .25us, 6: .125us
+
 typedef struct
 {
-  uint32_t data[128];
-  uint8_t n_valid;
+  uint32_t data[IQ_MAX_CNT];
+  uint16_t n_valid;
 } _iq_data_t;
 typedef struct
 {
@@ -71,15 +74,15 @@ void CTE_init(void)
     .numberof8us = 0x3F,
     .dfeinextension = 1,
     .tswitchspacing = 2,
-    .tsamplespacingref = 3,
+    .tsamplespacingref = SAMPLE_PERIOD,
     .sampletype = 0,
-    .tsamplespacing = 3,
+    .tsamplespacing = SAMPLE_PERIOD,
     .repeatpattern = 0,
     .agcbackoffgain = 0,
     .tswitchoffset = 0,
     .tsampleoffset = 1,
     .ptr = iq_data.data,
-    .maxcnt = 128
+    .maxcnt = IQ_MAX_CNT
   };
   RC_configureDfe(&dfe_settings);
 }
@@ -160,7 +163,7 @@ uint8_t CTE_getPacketData(uint8_t * dest, uint8_t n)
   return n;
 }
 
-uint8_t CTE_getIqData(uint32_t * dest, uint8_t n)
+uint16_t CTE_getIqData(uint32_t * dest, uint16_t n)
 {
   assert(n > 0);
   assert(dest != 0);

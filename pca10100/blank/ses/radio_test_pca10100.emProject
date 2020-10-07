@@ -118,6 +118,12 @@
     <file file_name="../../../radio_config.h" />
     <file file_name="../../../radio_test.h" />
     <file file_name="../../../vcom.h" />
+    <file file_name="../../../transmit_tones.c" />
+    <file file_name="transmit_tones.h" />
+    <file file_name="../../../ppi_config.c" />
+    <file file_name="../../../ppi_config.h" />
+    <file file_name="timer_config.c" />
+    <file file_name="../../../timer_config.h" />
   </project>
   <configuration
     Name="Release"

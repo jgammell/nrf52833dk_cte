@@ -80,6 +80,7 @@
 #include "cte.h"
 #include "vcom.h"
 #include "led_assert.h"
+#include "transmit_tones.h"
 
 NRF_CLI_UART_DEF(m_cli_uart_transport, 0, 64, 16);
 NRF_CLI_DEF(m_cli_uart,
@@ -153,7 +154,6 @@ int main(void)
   assert(error_code == NRF_SUCCESS);
   clock_init();
   VCOM_init();
-  CTE_init();
 
   uint8_t cmd[16];
   while(1)
@@ -161,44 +161,45 @@ int main(void)
     memcpy(cmd, VCOM_readline('\n'), 2);
     if(cmd[0] == (uint8_t)'t')
     {
-      char ack_str[64];
-      uint8_t payload = (uint8_t)cmd[1];
-      sprintf(ack_str, "Transmitting 0x%x.\n", payload);
+      char ack_str[] = "About to transmit.\n";
       VCOM_tx(ack_str, strlen(ack_str));
-      CTE_transmitPacket(payload);
-      const char success_str[] = "Done transmitting.\n";
-      VCOM_tx(success_str, strlen(success_str));
+      TT_transmitTones();
+      char done_str[] = "Done transmitting.\n";
+      VCOM_tx(done_str, strlen(done_str));
+
     }
     else if(cmd[0] == (uint8_t)'r')
     {
-      const char ack_str[] = "Beginning reception.\n";
-      char success_str[64];
-      const char failure_str[] = "Packet failed CRC check.\n";
+      char ack_str[] = "About to receive.\n";
       VCOM_tx(ack_str, strlen(ack_str));
-      bool success = CTE_receivePacket();
-      if(!success)
+      TT_receiveTones();
+      char done_str[] = "Done receiving.\n";
+      VCOM_tx(done_str, strlen(done_str));
+      int trial_num = 0;
+      while(trial_num < 40)
       {
-        VCOM_tx(failure_str, strlen(failure_str));
-        continue;
+        char start_data_str[] = "Next trial data:\n";
+        VCOM_tx(start_data_str, strlen(start_data_str));
+        uint32_t time;
+        uint32_t * iq_data;
+        TT_getTrialData(trial_num, &iq_data, &time);
+        char time_str[64];
+        sprintf(time_str, "Time: %d\n", time);
+        VCOM_tx(time_str, strlen(time_str));
+        for(int i=0; i<TT_MAX_SAMPLES; ++i)
+        {
+          char data_str[64];
+          sprintf(data_str, "%d,%d\n", (int16_t)(iq_data[i]&0x0000FFFF), (int16_t)((iq_data[i]&0xFFFF0000)>>16));
+          VCOM_tx(data_str, strlen(data_str));
+        }
+        trial_num += 1;
       }
-      uint8_t payload;
-      CTE_getPacketData(&payload, 1);
-      sprintf(success_str, "Payload: 0x%x.\n", payload);
-      VCOM_tx(success_str, strlen(success_str));
-      uint32_t iq_samples[128];
-      uint8_t n_iq = CTE_getIqData(iq_samples, 128);
-      char iq_str[64];
-      sprintf(iq_str, "Took %d IQ samples.\n", n_iq);
-      VCOM_tx(iq_str, strlen(iq_str));
-      for(int i=0; i<n_iq; ++i)
-      {
-        sprintf(iq_str, "%d;%d\n", (int16_t)(iq_samples[i]&0x0000FFFF), (int16_t)((iq_samples[i]&0xFFFF0000)>>16));
-        VCOM_tx(iq_str, strlen(iq_str));
-      }
+      char done_data_str[] = "Done returning data.\n";
+      VCOM_tx(done_data_str, strlen(done_data_str));
     }
     else
     {
-      const char failure_str[] = "Invalid input.\n";
+      char failure_str[] = "Invalid input.\n";
       VCOM_tx(failure_str, strlen(failure_str));
     }
   }

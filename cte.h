@@ -12,6 +12,6 @@ bool CTE_receivePacket(void);
 
 uint8_t CTE_getPacketData(uint8_t * dest, uint8_t n);
 
-uint8_t CTE_getIqData(uint32_t * dest, uint8_t n);
+uint16_t CTE_getIqData(uint32_t * dest, uint16_t n);
 
 #endif

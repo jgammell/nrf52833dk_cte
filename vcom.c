@@ -22,7 +22,7 @@ void VCOM_init(void)
     .p_context = NULL,
     .hwfc = NRF_UART_HWFC_DISABLED,
     .parity = NRF_UART_PARITY_EXCLUDED,
-    .baudrate = NRF_UART_BAUDRATE_9600,
+    .baudrate = NRF_UART_BAUDRATE_115200,
     .interrupt_priority = 0
   };
   nrfx_err_t error_info = nrfx_uart_init(&vcom_uart, &config, NULL);

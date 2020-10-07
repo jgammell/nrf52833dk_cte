@@ -94,4 +94,5 @@ Output/Release/Obj/radio_test_pca10100/main.o: \
  ../../../../../../components/libraries/log/nrf_log_default_backends.h \
  C:\Users\jgamm\Desktop\rssi_measurement\nrf52833_development\examples\peripheral\radio_test\cte.h \
  C:\Users\jgamm\Desktop\rssi_measurement\nrf52833_development\examples\peripheral\radio_test\vcom.h \
- C:\Users\jgamm\Desktop\rssi_measurement\nrf52833_development\examples\peripheral\radio_test\led_assert.h
+ C:\Users\jgamm\Desktop\rssi_measurement\nrf52833_development\examples\peripheral\radio_test\led_assert.h \
+ C:\Users\jgamm\Desktop\rssi_measurement\nrf52833_development\examples\peripheral\radio_test\transmit_tones.h
